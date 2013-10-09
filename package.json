@@ -18,5 +18,8 @@
     "design"
   ],
   "author": "Zach Wolf",
-  "license": "BSD"
+  "license": "BSD",
+  "devDependencies": {
+    "grunt-markdown": "~0.4.0"
+  }
 }
