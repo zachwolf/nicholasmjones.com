@@ -22,22 +22,18 @@ module.exports = function(grunt) {
           }
         ],
         options: {
-          // template: 'myTemplate.jst',
-          preCompile: function(src, context) {
-            console.log("pre");
-          },
-          postCompile: function(src, context) {
-            console.log("post");
-          }/*,
-          templateContext: {},
+          /*template: 'myTemplate.jst',
+          preCompile: function(src, context) {},
+          postCompile: function(src, context) {},
+          templateContext: {},*/
           markdownOptions: {
-            gfm: true,
+            gfm: true/*,
             highlight: manual,
             codeLines: {
               before: '<span>',
               after: '</span>'
-            }
-          }*/
+            }*/
+          }
         }
       }
     },
@@ -58,6 +54,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-markdown');
 
   // Default task.
-  grunt.registerTask('default', ['markdown:all']);
+  grunt.registerTask('default', ['markdown']);
 
 };
