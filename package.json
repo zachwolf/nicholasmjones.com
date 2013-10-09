@@ -20,6 +20,7 @@
   "author": "Zach Wolf",
   "license": "BSD",
   "devDependencies": {
-    "grunt-markdown": "~0.4.0"
+    "grunt-markdown": "~0.4.0",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }

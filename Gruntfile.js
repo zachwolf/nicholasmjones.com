@@ -11,22 +11,53 @@ module.exports = function(grunt) {
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
+    markdown: {
+      all: {
+        files: [
+          {
+            expand: true,
+            src: 'src/markdown/*.md',
+            dest: 'src/html/',
+            ext: '.html'
+          }
+        ],
+        options: {
+          // template: 'myTemplate.jst',
+          preCompile: function(src, context) {
+            console.log("pre");
+          },
+          postCompile: function(src, context) {
+            console.log("post");
+          }/*,
+          templateContext: {},
+          markdownOptions: {
+            gfm: true,
+            highlight: manual,
+            codeLines: {
+              before: '<span>',
+              after: '</span>'
+            }
+          }*/
+        }
+      }
+    },
     watch: {
-      gruntfile: {
+      /*gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
       lib_test: {
         files: '<%= jshint.lib_test.src %>',
         tasks: ['jshint:lib_test', 'qunit']
-      }
+      }*/
     }
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-markdown');
 
   // Default task.
-  grunt.registerTask('default', []);
+  grunt.registerTask('default', ['markdown:all']);
 
 };
