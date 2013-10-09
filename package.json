@@ -1,0 +1,22 @@
+{
+  "name": "nicholasmjones.com",
+  "version": "0.0.0",
+  "description": "Nick Mjones portfolio source",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zachwolf/nicholasmjones.com.git"
+  },
+  "keywords": [
+    "nick",
+    "mjones",
+    "portfolio",
+    "graphic",
+    "design"
+  ],
+  "author": "Zach Wolf",
+  "license": "BSD"
+}
