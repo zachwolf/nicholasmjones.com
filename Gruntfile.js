@@ -52,6 +52,7 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-markdown');
+  grunt.loadNpmTasks('grunt-contrib-handlebars');
 
   // Default task.
   grunt.registerTask('default', ['markdown']);

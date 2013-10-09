@@ -21,6 +21,7 @@
   "license": "BSD",
   "devDependencies": {
     "grunt-markdown": "~0.4.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-handlebars": "~0.5.11"
   }
 }
