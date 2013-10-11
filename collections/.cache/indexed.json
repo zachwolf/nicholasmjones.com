@@ -1,0 +1,92 @@
+{
+  "portfolio": {
+    "index": {
+      "mixture_month_year": {
+        "10/2013": [
+          "/portfolio/thing",
+          "/portfolio/thing2"
+        ]
+      },
+      "year": {
+        "2013": [
+          "/portfolio/thing",
+          "/portfolio/thing2"
+        ]
+      },
+      "thumbnail": {
+        "thumbnail.png": [
+          "/portfolio/thing2"
+        ],
+        "test": [
+          "/portfolio/thing"
+        ]
+      },
+      "month": {
+        "10": [
+          "/portfolio/thing",
+          "/portfolio/thing2"
+        ]
+      },
+      "title": {
+        "test project": [
+          "/portfolio/thing"
+        ],
+        "test project 2": [
+          "/portfolio/thing2"
+        ]
+      },
+      "ticks": {
+        "1381466775.0": [
+          "/portfolio/thing2"
+        ],
+        "1381466746.0": [
+          "/portfolio/thing"
+        ]
+      },
+      "mixture_date": {
+        "2013-10-10t23:46:15-05:00": [
+          "/portfolio/thing2"
+        ],
+        "2013-10-10t23:45:46-05:00": [
+          "/portfolio/thing"
+        ]
+      },
+      "slug": {
+        "/portfolio/thing": [
+          "/portfolio/thing"
+        ],
+        "/portfolio/thing2": [
+          "/portfolio/thing2"
+        ]
+      }
+    },
+    "collection": {
+      "/portfolio/thing": {
+        "mixture_month_year": "10/2013",
+        "year": "2013",
+        "thumbnail": "test",
+        "month": "10",
+        "mixture_date": "2013-10-10T23:45:46-05:00",
+        "ticks": 1381466746.0,
+        "title": "Test Project",
+        "body": "\n<p>test</p>\n\n<h1>hi!</h1>\n",
+        "date": "Fri Oct 11 04:45:46 UTC 2013",
+        "slug": "/portfolio/thing",
+        "published": true
+      },
+      "/portfolio/thing2": {
+        "mixture_month_year": "10/2013",
+        "year": "2013",
+        "thumbnail": "thumbnail.png",
+        "month": "10",
+        "mixture_date": "2013-10-10T23:46:15-05:00",
+        "ticks": 1381466775.0,
+        "title": "Test Project 2",
+        "body": "\n<h1>bye</h1>\n",
+        "date": "Fri Oct 11 04:46:15 UTC 2013",
+        "slug": "/portfolio/thing2",
+        "published": true
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  {% include "global/title" %}
+  {{ "your-project.css" | asset_url | stylesheet_tag }}
+</head>
+<body class="page">
+  {% include "global/navigation" %}

@@ -1,0 +1,11 @@
+{% block content %}
+
+  {% collection "portfolio" %}
+    <ul>
+    {% for post in collection.items %}
+      {% include "portfolio/thumbnail" with post %}
+    {% endfor %}
+    </ul>
+  {% endcollection %}
+
+{% endblock %}

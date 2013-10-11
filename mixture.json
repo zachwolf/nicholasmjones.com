@@ -1,0 +1,23 @@
+{
+  "debug": false,
+  "domain": null,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": "public",
+  "preprocessorScriptOutput": "public/scripts",
+  "preprocessorStyleOutput": "public/styles",
+  "projectDescription": "A powerful, scalable, Sass-based, BEM, OOCSS framework.",
+  "projectName": "nickmjones",
+  "publishedId": null,
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": false,
+  "routes": [
+    { "route": "portfolio/project/:category", "template": "portfolio", "redirect": null }
+  ]
+}
