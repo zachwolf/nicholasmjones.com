@@ -4,6 +4,4 @@ thumbnail: test
 published: true
 ---
 
-test
-
 # hi!
