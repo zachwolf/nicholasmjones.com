@@ -1,3 +1,2 @@
-{% capture page_title %}{% if model.title and model.title != '' %}{{ model.title}} | {% endif %}{{ global.title }}{% endcapture %}
-
-<title>{{ page_title }}</title>
+{% if mixture.debug %}<!-- title.liquid -->
+{% endif %}  <title>{% if model.title and model.title != '' %}{{ model.title}} | {% endif %}{{ global.title }}</title>

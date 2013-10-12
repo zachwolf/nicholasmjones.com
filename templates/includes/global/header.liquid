@@ -1,13 +1,14 @@
-<!doctype html>
+{% if mixture.debug %}<!-- header.liquid -->
+{% endif %}<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   {% include "global/title" %}
-  {% if model.debug %}
-	  {{ "app.min.css" | asset_url | stylesheet_tag }}
-  {% else %}
-	  {{ "app.css" | asset_url | stylesheet_tag }}
-  {% endif %}
+{% if model.debug %}
+  {{ "app.min.css" | asset_url | stylesheet_tag }}
+{% else %}
+  {{ "app.css" | asset_url | stylesheet_tag }}
+{% endif %}
 </head>
 <body class="page">
   {% include "global/navigation" %}

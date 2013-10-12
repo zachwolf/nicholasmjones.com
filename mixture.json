@@ -6,7 +6,7 @@
   "preprocessorLocations": "public",
   "preprocessorScriptOutput": "public/scripts",
   "preprocessorStyleOutput": "public/styles",
-  "projectDescription": "A powerful, scalable, Sass-based, BEM, OOCSS framework.",
+  "projectDescription": "The portfolio of Nick Mjones - Designer and Illustrator",
   "projectName": "nickmjones",
   "publishedId": null,
   "serverHostname": null,
@@ -18,6 +18,6 @@
   "type": "mixture",
   "useCompass": false,
   "routes": [
-    { "route": "portfolio/project/:category", "template": "portfolio", "redirect": null }
+    { "route": "portfolio/:project", "template": "test", "redirect": null }
   ]
 }
