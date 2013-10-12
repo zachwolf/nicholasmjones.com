@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   {% include "global/title" %}
-  {{ "your-project.css" | asset_url | stylesheet_tag }}
+  {% if model.debug %}
+	  {{ "app.min.css" | asset_url | stylesheet_tag }}
+  {% else %}
+	  {{ "app.css" | asset_url | stylesheet_tag }}
+  {% endif %}
 </head>
 <body class="page">
   {% include "global/navigation" %}
