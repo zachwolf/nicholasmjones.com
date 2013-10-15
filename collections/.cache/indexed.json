@@ -1,50 +1,114 @@
 {
   "portfolio": {
     "collection": {
-      "/portfolio/photography": {
-        "mixture_date": "2013-10-12T13:43:02-05:00",
-        "month": "10",
-        "thumbnail": "test",
-        "date": "Sat Oct 12 18:43:02 UTC 2013",
-        "ticks": 1381603382.0,
-        "year": "2013",
-        "title": "Photography",
-        "body": "<div class='haml-test'>\n  photography page\n</div>\n",
-        "mixture_month_year": "10/2013",
-        "published": true,
-        "pageScripts": [
-          "lightbox"
-        ],
-        "slug": "/portfolio/photography"
-      },
-      "/portfolio/thing2": {
-        "mixture_date": "2013-10-10T23:46:15-05:00",
-        "month": "10",
-        "thumbnail": "thumbnail.png",
-        "date": "Fri Oct 11 04:46:15 UTC 2013",
-        "ticks": 1381466775.0,
-        "year": "2013",
-        "title": "Test Project 2",
-        "body": "\n<h1>bye</h1>\n",
-        "mixture_month_year": "10/2013",
-        "published": true,
-        "slug": "/portfolio/thing2"
-      },
       "/portfolio/thing": {
+        "date": "Fri Oct 11 04:45:46 UTC 2013",
+        "slug": "/portfolio/thing",
+        "ticks": 1381466746.0,
+        "thumbnail": "test",
+        "year": "2013",
         "mixture_date": "2013-10-10T23:45:46-05:00",
         "month": "10",
-        "date": "Fri Oct 11 04:45:46 UTC 2013",
-        "thumbnail": "test",
-        "ticks": 1381466746.0,
-        "year": "2013",
         "body": "\n<h1>hi!</h1>\n",
+        "mixture_month_year": "10/2013",
         "title": "Test Project",
+        "published": true
+      },
+      "/portfolio/photography": {
+        "pageScripts": [
+          "lightbox",
+          "thing",
+          3
+        ],
+        "date": "Sat Oct 12 18:43:02 UTC 2013",
+        "slug": "/portfolio/photography",
+        "ticks": 1381603382.0,
+        "thumbnail": "test",
+        "year": "2013",
+        "mixture_date": "2013-10-12T13:43:02-05:00",
+        "month": "10",
+        "body": "<div class='haml-test'>\n  photography page\n</div>\n",
+        "/ layout": "route",
         "mixture_month_year": "10/2013",
         "published": true,
-        "slug": "/portfolio/thing"
+        "title": "Photography"
+      },
+      "/portfolio/thing2": {
+        "date": "Fri Oct 11 04:46:15 UTC 2013",
+        "slug": "/portfolio/thing2",
+        "ticks": 1381466775.0,
+        "thumbnail": "thumbnail.png",
+        "year": "2013",
+        "mixture_date": "2013-10-10T23:46:15-05:00",
+        "month": "10",
+        "body": "\n<h1>bye</h1>\n",
+        "mixture_month_year": "10/2013",
+        "title": "Test Project 2",
+        "published": true
       }
     },
     "index": {
+      "pageScripts": {
+        "3": [
+          "/portfolio/photography"
+        ],
+        "lightbox": [
+          "/portfolio/photography"
+        ],
+        "thing": [
+          "/portfolio/photography"
+        ]
+      },
+      "slug": {
+        "/portfolio/thing": [
+          "/portfolio/thing"
+        ],
+        "/portfolio/photography": [
+          "/portfolio/photography"
+        ],
+        "/portfolio/thing2": [
+          "/portfolio/thing2"
+        ]
+      },
+      "ticks": {
+        "1381466775.0": [
+          "/portfolio/thing2"
+        ],
+        "1381603382.0": [
+          "/portfolio/photography"
+        ],
+        "1381466746.0": [
+          "/portfolio/thing"
+        ]
+      },
+      "thumbnail": {
+        "thumbnail.png": [
+          "/portfolio/thing2"
+        ],
+        "test": [
+          "/portfolio/thing",
+          "/portfolio/photography"
+        ]
+      },
+      "year": {
+        "2013": [
+          "/portfolio/thing",
+          "/portfolio/photography",
+          "/portfolio/thing2"
+        ]
+      },
+      "/ layout": {
+        "route": [
+          "/portfolio/photography"
+        ]
+      },
+      "month": {
+        "10": [
+          "/portfolio/thing",
+          "/portfolio/photography",
+          "/portfolio/thing2"
+        ]
+      },
       "mixture_date": {
         "2013-10-10t23:46:15-05:00": [
           "/portfolio/thing2"
@@ -56,72 +120,22 @@
           "/portfolio/thing"
         ]
       },
-      "month": {
-        "10": [
+      "mixture_month_year": {
+        "10/2013": [
+          "/portfolio/thing",
           "/portfolio/photography",
-          "/portfolio/thing2",
-          "/portfolio/thing"
-        ]
-      },
-      "thumbnail": {
-        "thumbnail.png": [
           "/portfolio/thing2"
-        ],
-        "test": [
-          "/portfolio/photography",
-          "/portfolio/thing"
         ]
       },
       "title": {
-        "photography": [
-          "/portfolio/photography"
-        ],
         "test project 2": [
           "/portfolio/thing2"
         ],
+        "photography": [
+          "/portfolio/photography"
+        ],
         "test project": [
           "/portfolio/thing"
-        ]
-      },
-      "year": {
-        "2013": [
-          "/portfolio/photography",
-          "/portfolio/thing2",
-          "/portfolio/thing"
-        ]
-      },
-      "ticks": {
-        "1381466775.0": [
-          "/portfolio/thing2"
-        ],
-        "1381466746.0": [
-          "/portfolio/thing"
-        ],
-        "1381603382.0": [
-          "/portfolio/photography"
-        ]
-      },
-      "mixture_month_year": {
-        "10/2013": [
-          "/portfolio/photography",
-          "/portfolio/thing2",
-          "/portfolio/thing"
-        ]
-      },
-      "slug": {
-        "/portfolio/photography": [
-          "/portfolio/photography"
-        ],
-        "/portfolio/thing2": [
-          "/portfolio/thing2"
-        ],
-        "/portfolio/thing": [
-          "/portfolio/thing"
-        ]
-      },
-      "pageScripts": {
-        "lightbox": [
-          "/portfolio/photography"
         ]
       }
     }
