@@ -1,0 +1,5 @@
+<script type="text/javascript">
+  var pageScripts = [{% for item in model.pageScripts %}"{{ item }}"{% unless forloop.last %}, {% endunless %}{% endfor %}];
+</script>
+
+<script type="text/javascript" data-main="{{ "app.js" | asset_url }}" src="{{ "require.js" | asset_url }}"></script>
