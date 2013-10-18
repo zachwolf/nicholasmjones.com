@@ -1,7 +1,9 @@
 <li class="">
 	<a href="{{ post.slug }}" class="">
 		{{ post.title }}
-		<img src="{{ "250x250" | placeholder:'FF6600','000000' | asset_url }}">
+		{{ post.thumbnail }}
+		<img src="{{ "300x200" | placeholder:'8393BB','ffffff' | asset_url }}">
+		<!-- <img src="{{ "450x300" | placeholder:'8393BB','ffffff' | asset_url }}"> -->
 	</a>
 <!-- thumbnail: {{ post.thumbnail }} <br> -->
 </li>

@@ -1,11 +1,17 @@
-<!-- {{mixture.route}} -->
 {% if mixture.debug %}<!-- layouts/layout.liquid -->{% endif %}
 {% include "global/header" %}
 
-  <div class="container">
-    {% block content %}
-      No content has been added for this page.
-    {% endblock %}
-  </div>
+<body class="page">
+  <div class="page__wrap">
+    {% include "global/navigation" %}
 
-{% include "global/footer" %}
+    <section class="container">
+      {% block content %}
+        No content has been added for this page.
+      {% endblock %}
+    </section>
+
+    {% include "global/footer" %}
+  </div>
+</body>
+</html>
