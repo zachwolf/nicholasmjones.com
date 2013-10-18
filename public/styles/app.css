@@ -14,104 +14,6 @@
  * Setup
  */
 /*------------------------------------*\
-    $DEFAULTS
-\*------------------------------------*/
-/**
- * inuit.css’ default variables. Redefine these in your `_vars.scss` file (found
- * in the inuit.css-web-template) to override them.
- */
-/*------------------------------------*\
-    $DEBUG
-\*------------------------------------*/
-/**
- * Debug mode will visually highlight any potential markup/accessibility quirks
- * in the browser. Set to `true` or `false`.
- */
-/*------------------------------------*\
-    $BORDER-BOX
-\*------------------------------------*/
-/**
- * Do you want all elements to adopt `box-sizing:border-box;` as per
- * paulirish.com/2012/box-sizing-border-box-ftw ?
- */
-/*------------------------------------*\
-    $BASE
-\*------------------------------------*/
-/**
- * Base stuff
- */
-/**
- * Base font-family.
- */
-/**
- * Default colour for objects’ borders etc.
- */
-/*------------------------------------*\
-    $RESPONSIVE
-\*------------------------------------*/
-/**
- * Responsiveness?
- */
-/**
- * Responsiveness for widescreen/high resolution desktop monitors and beyond?
- * Note: `$responsive` variable above must be set to true before enabling this.
- */
-/**
- * Responsive push and pull produce a LOT of code, only turn them on if you
- * definitely need them.
- */
-/**
- * Note: `$push` variable above must be set to true before enabling these.
- */
-/**
- * Note: `$pull` variable above must be set to true before enabling these.
- */
-/**
- * Tell inuit.css when breakpoints start.
- */
-/*------------------------------------*\
-    $FONT-SIZES
-\*------------------------------------*/
-/**
- * Font-sizes (in pixels). Refer to relevant sections for their implementations.
- */
-/*------------------------------------*\
-    $QUOTES
-\*------------------------------------*/
-/**
- * English quote marks?
- */
-/**
- * If you want English quotes then please do not edit these; they’re only here
- * because Sass needs them.
- */
-/**
- * If you need non-English quotes, please alter the following values accordingly:
- */
-/*------------------------------------*\
-    $BRAND
-\*------------------------------------*/
-/**
- * Brand stuff
- */
-/**
- * How big would you like round corners to be by default?
- */
-/*------------------------------------*\
-    $OBJECTS AND ABSTRACTIONS
-\*------------------------------------*/
-/**
- * Which objects and abstractions would you like to use?
- */
-/*------------------------------------*\
-    $FRAMEWORK
-\*------------------------------------*/
-/**
- * inuit.css will work these next ones out for use within the framework.
- *
- * Assign our `$base-line-height` to a new spacing var for more transparency.
- */
-/*------------------------------------*\
     INUIT.CSS
 \*------------------------------------*/
 /*!*
@@ -370,6 +272,29 @@
 /**
  * Which objects and abstractions would you like to use?
  */
+/*
+$use-flexbox:       false;
+$use-columns:       false;
+$use-options:       false;
+$use-pagination:    false;
+$use-breadcrumb:    false;
+$use-media:         false;
+$use-marginalia:    false;
+$use-island:        false;
+$use-block-list:    false;
+$use-matrix:        false;
+$use-split:         false;
+$use-this-or-this:  false;
+$use-link-complex:  false;
+$use-flyout:        false;
+$use-arrows:        false;
+$use-icon-text:     false;
+$use-beautons:      false;
+$use-lozenges:      false;
+$use-rules:         false;
+$use-stats:         false;
+$use-greybox:       false;
+*/
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -1985,213 +1910,105 @@ label,
   display: none; }
 
 /*------------------------------------*\
-    $BEAUTONS.CSS
+    $SPRITE
 \*------------------------------------*/
 /**
- * beautons is a beautifully simple button toolkit.
+ * Giving an element a class of `.sprite` will throw it into ‘sprite’ mode and apply
+ * a background image e.g.:
  *
- * LICENSE
- * 
- * Copyright 2013 Harry Roberts
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- * http://apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * 
- */
-/*!*
- * 
- * @csswizardry -- csswizardry.com/beautons
- * 
- */
-/*------------------------------------*\
-    $BASE
-\*------------------------------------*/
-/**
- * Base button styles.
+   <a class="sprite  sprite--question-mark">More info&hellip;</a>
  *
- * 1. Allow us to better style box model properties.
- * 2. Line different sized buttons up a little nicer.
- * 3. Stop buttons wrapping and looking broken.
- * 4. Make buttons inherit font styles.
- * 5. Force all elements using beautons to appear clickable.
- * 6. Normalise box model styles.
- * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
- *    there is 1em of space above and below that text. We therefore apply 1em
- *    of space to the left and right, as padding, to keep consistent spacing.
- * 8. Basic cosmetics for default buttons. Change or override at will.
- * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ * or
+ *
+   <a href=#><i class="sprite  sprite--question-mark"></i> Help and FAQ</a>
+ *
+ * Giving an element a class of `.icon` will throw it into ‘icon’ mode and will
+ * not add a background, but should be used for icon fonts and is populated
+ * through a `data-icon` attribute and the `:after` pseudo-element, e.g.:
+ *
+   <a href=#><i class=icon data-icon="&#xF000;"></i> View your favourites</a>
+ *
+ * Where ‘&#xF000;’ might map to a star in your particular icon font.
+ *
+ * These all require extension in your theme stylesheet, e.g. in your own CSS:
+ *
+   .sprite{
+       background-image:url(path/to/your/sprite.png);
+   }
+   .sprite--link{ background-position:0   0  ; }
+   .sprite--star{ background-position:0 -16px; }
+ *
+ * Demo: jsfiddle.net/inuitcss/6TKuS
+ *
  */
-/* line 56, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn {
+/* line 36, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+.sprite,
+.icon {
   display: inline-block;
-  /* [1] */
+  line-height: 1;
+  position: relative;
   vertical-align: middle;
-  /* [2] */
-  white-space: nowrap;
-  /* [3] */
-  font-family: inherit;
-  /* [4] */
-  font-size: 100%;
-  /* [4] */
-  cursor: pointer;
-  /* [5] */
-  border: none;
-  /* [6] */
-  margin: 0;
-  /* [6] */
-  padding-top: 0;
-  /* [6] */
-  padding-bottom: 0;
-  /* [6] */
-  line-height: 3;
-  /* [7] */
-  padding-right: 1em;
-  /* [7] */
-  padding-left: 1em;
-  /* [7] */
-  border-radius: 4px;
-  /* [8] */ }
-
-/* line 76, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn, .btn:hover {
-  text-decoration: none;
-  /* [9] */ }
-/* line 81, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn:active, .btn:focus {
-  outline: none; }
-
-/*------------------------------------*\
-    $SIZES
-\*------------------------------------*/
-/**
- * Button size modifiers.
- *
- * These all follow the same sizing rules as above; text is 1em, space around it
- * remains uniform.
- */
-/* line 99, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--small {
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  line-height: 2; }
-
-/* line 105, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--large {
-  padding-right: 1.5em;
-  padding-left: 1.5em;
-  line-height: 4; }
-
-/* line 111, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--huge {
-  padding-right: 2em;
-  padding-left: 2em;
-  line-height: 5; }
-
-/**
- * These buttons will fill the entirety of their container.
- *
- * 1. Remove padding so that widths and paddings don’t conflict.
- */
-/* line 122, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--full {
-  width: 100%;
-  padding-right: 0;
-  /* [1] */
-  padding-left: 0;
-  /* [1] */
+  zoom: 1;
+  /**
+   * So using `.icon` on certain elements doesn’t make a visual difference.
+   */
+  font-style: normal;
+  font-weight: normal;
+  /**
+   * So icons added using `.icon` sit in the centre of the element.
+   */
   text-align: center; }
 
-/*------------------------------------*\
-    $FONT-SIZES
-\*------------------------------------*/
-/**
- * Button font-size modifiers.
- */
-/* line 139, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--alpha {
-  font-size: 3rem; }
-
-/* line 143, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--beta {
-  font-size: 2rem; }
-
-/* line 147, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--gamma {
-  font-size: 1rem; }
-
-/**
- * Make the button inherit sizing from its parent.
- */
-/* line 154, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--natural {
-  vertical-align: baseline;
-  font-size: inherit;
-  line-height: inherit;
-  padding-right: 0.5em;
-  padding-left: 0.5em; }
-
-/*------------------------------------*\
-    $FUNCTIONS
-\*------------------------------------*/
-/**
- * Button function modifiers.
- */
-/**
- * Positive actions; e.g. sign in, purchase, submit, etc.
- */
-/* line 179, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--positive {
-  background-color: #4A993E;
-  color: #fff; }
+/* line 52, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+.sprite {
+  /**
+   * The typical size of most icons. Override in your theme stylesheet.
+   */
+  width: 16px;
+  height: 16px;
+  top: -1px;
+  /*
+   * H5BP method image replacement:
+   * github.com/h5bp/html5-boilerplate/commit/adecc5da035d6d76b77e3fa95c6abde841073da2
+   */
+  overflow: hidden;
+  *text-indent: -9999px; }
+  /* line 67, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+  .sprite:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%; }
 
 /**
- * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ * Set up icon font
  */
-/* line 187, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--negative {
-  background-color: #b33630;
-  color: #fff; }
+/* line 78, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+.icon {
+  font-size: 16px;
+  /**
+   * Place the icon in a box the exact same dimensions as the icon itself.
+   */
+  width: 1em;
+  height: 1em; }
+  /* line 86, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+  .icon:before {
+    content: attr(data-icon); }
 
 /**
- * Inactive, disabled buttons.
- * 
- * 1. Make the button look like normal text when hovered.
+ * Icon size modifiers.
  */
-/* line 200, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--inactive,
-.btn--inactive:hover,
-.btn--inactive:active,
-.btn--inactive:focus {
-  background-color: #ddd;
-  color: #777;
-  cursor: text;
-  /* [1] */ }
+/* line 94, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+.icon--large {
+  font-size: 32px; }
 
-/*------------------------------------*\
-    $STYLES
-\*------------------------------------*/
-/**
- * Button style modifiers.
- *
- * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
- */
-/* line 218, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--soft {
-  border-radius: 200px;
-  /* [1] */ }
+/* line 95, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+.icon--huge {
+  font-size: 64px; }
 
-/* line 222, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_beautons.scss */
-.btn--hard {
-  border-radius: 0; }
+/* line 96, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/objects/_sprite.scss */
+.icon--natural {
+  font-size: inherit; }
 
 /**
  * Style trumps; helper and brand classes
@@ -2986,17 +2803,17 @@ label,
  */
 /* line 8, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/generic/_brand.scss */
 .brand {
-  font-family: "Helvetica Neue", sans-serif!important;
-  color: #4a8ec2!important; }
+  font-family: "Novecento", sans-serif!important;
+  color: #2d569f!important; }
 
 /* line 12, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/generic/_brand.scss */
 .brand-face {
-  font-family: "Helvetica Neue", sans-serif!important; }
+  font-family: "Novecento", sans-serif!important; }
 
 /* line 16, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/inuit.css/generic/_brand.scss */
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important; }
+  color: #2d569f!important; }
 
 /*------------------------------------*\
     $HELPER
@@ -3388,14 +3205,58 @@ label,
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2013 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Synthview Type Design
+ * License URL: http://www.fontspring.com/fflicense/synthview
+ *
+ *
+ */
+@font-face {
+  font-family: 'Novecento';
+  src: url("/public/fonts/Novecentowide-Light-webfont.eot");
+  src: url("/public/fonts/Novecentowide-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/public/fonts/Novecentowide-Light-webfont.woff") format("woff"), url("/public/fonts/Novecentowide-Light-webfont.ttf") format("truetype"), url("/public/fonts/Novecentowide-Light-webfont.svg#NovecentowideLightRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /* body */
-/* line 5, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 3, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.page {
+  background-color: #c9c9c9; }
+
+/* div */
+/* line 7, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.page__wrap {
+  max-width: 640px;
+  margin: 0 auto; }
+
+/* line 12, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .s {
   display: inline-block;
   background-repeat: no-repeat; }
 
-/* line 10, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 17, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .s--logo {
   height: 150px;
   width: 260px;
   background-image: url("../img/nick-mjones-logo.svg"); }
+
+/* line 23, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.headline {
+  font-family: "Novecento", sans-serif; }
