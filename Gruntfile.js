@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
+            flatten: true,
             src: 'src/markdown/*.md',
             dest: 'src/html/',
             ext: '.html'
