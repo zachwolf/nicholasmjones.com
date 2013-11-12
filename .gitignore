@@ -2,3 +2,5 @@
 node_modules/*
 
 src/html/*
+
+collections/.cache/indexed.json
