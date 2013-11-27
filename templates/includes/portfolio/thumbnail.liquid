@@ -1,9 +1,10 @@
-<li class="">
-	<a href="{{ post.slug }}" class="">
-		{{ post.title }}
-		{{ post.thumbnail }}
-		<img src="{{ "300x200" | placeholder:'8393BB','ffffff' | asset_url }}">
-		<!-- <img src="{{ "450x300" | placeholder:'8393BB','ffffff' | asset_url }}"> -->
+<li class="grid__item  one-half  palm-one-whole">
+	<a href="{{ post.slug }}" class="thumbnail">
+		<span class="middle-maker">
+			<h3 class="headline  gamma  thumbnail__headline  middle-maker__content">
+				{{ post.title }}
+			</h3>
+		</span>
+		<img src="{{ post.thumbnail | asset_url }}" class="thumbnail__background">
 	</a>
-<!-- thumbnail: {{ post.thumbnail }} <br> -->
 </li>

@@ -1,5 +1,6 @@
 ---
-thumbnail: test
+title: Photography
+thumbnail: 600x400.png
 published: true
 ---
 

@@ -3235,28 +3235,86 @@ label,
   font-weight: normal;
   font-style: normal; }
 
+/**
+ * Thumbnail for projects:
+ *
+  <a href="{{ post.slug }}" class="thumbnail">
+    <h3 class="thumbnail__headline">
+      {{ post.title }}
+    </h3>
+    <img src="{{ post.thumbnail | asset_url }}" class="thumbnail__background">
+  </a>
+ *
+ */
+/* line 13, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+.thumbnail {
+  display: block;
+  margin-bottom: 24px;
+  position: relative; }
+  /* line 18, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+  .thumbnail::before {
+    content: "";
+    display: none;
+    position: absolute;
+    background-color: rgba(45, 86, 159, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; }
+  /* line 31, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+  .thumbnail:hover::before {
+    display: block; }
+  /* line 35, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+  .thumbnail:hover .thumbnail__headline {
+    display: block; }
+
+/* line 41, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+.thumbnail__headline {
+  position: relative;
+  z-index: 2;
+  color: #fff; }
+
+/* line 48, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+.thumbnail__background {
+  display: block; }
+
+/* line 4, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_middle-maker.scss */
+.middle-maker {
+  position: absolute;
+  display: inline-table;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+/* line 13, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_middle-maker.scss */
+.middle-maker__content {
+  display: table-cell;
+  vertical-align: middle; }
+
 /* body */
-/* line 3, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 5, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .page {
   background-color: #c9c9c9; }
 
 /* div */
-/* line 7, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 9, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .page__wrap {
   max-width: 640px;
   margin: 0 auto; }
 
-/* line 12, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 14, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .s {
   display: inline-block;
   background-repeat: no-repeat; }
 
-/* line 17, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 19, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .s--logo {
   height: 150px;
   width: 260px;
   background-image: url("../img/nick-mjones-logo.svg"); }
 
-/* line 23, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 25, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .headline {
   font-family: "Novecento", sans-serif; }

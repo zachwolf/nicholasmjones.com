@@ -1,6 +1,6 @@
 ---
 title: Test Project
-thumbnail: test
+thumbnail: 600x400.png
 published: true
 ---
 

@@ -1,0 +1,16 @@
+//<span class="middle-maker">
+//			<h3 class="headline  gamma  thumbnail__headline  middle-maker__content">
+
+.middle-maker {
+	position: absolute;
+	display: inline-table;
+	top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.middle-maker__content {
+	display: table-cell;
+	vertical-align: middle;
+}
