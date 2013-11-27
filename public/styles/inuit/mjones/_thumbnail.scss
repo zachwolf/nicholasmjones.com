@@ -1,12 +1,18 @@
 /**
  * Thumbnail for projects:
  *
-  <a href="{{ post.slug }}" class="thumbnail">
-    <h3 class="thumbnail__headline">
-      {{ post.title }}
-    </h3>
-    <img src="{{ post.thumbnail | asset_url }}" class="thumbnail__background">
-  </a>
+  <li class="grid__item  one-half  palm-one-whole">
+    <a href="{{ post.slug }}" class="thumbnail">
+      <div class="thumbnail__layer  thumbnail__hover-content">
+        <div class="middle-maker">
+          <h3 class="headline  gamma  thumbnail__headline  middle-maker__content">
+            {{ post.title }}
+          </h3>
+        </div>
+      </div>
+      <img src="{{ post.thumbnail | asset_url }}" class="thumbnail__background">
+    </a>
+  </li>
  *
  */
 
