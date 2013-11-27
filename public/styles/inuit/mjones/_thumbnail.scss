@@ -15,34 +15,37 @@
   margin-bottom: $base-spacing-unit;
   position: relative;
 
-  &::before {
-    content: "";
-    display: none;
-    position: absolute;
-    background-color: rgba($brand-color, .5);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+  .thumbnail__hover-content {
+    -webkit-transition: opacity 0.3s ease-out;
+       -moz-transition: opacity 0.3s ease-out;
+         -o-transition: opacity 0.3s ease-out;
+            transition: opacity 0.3s ease-out;
+    background-color: rgba($brand-color, .75);
+    opacity: 0;
   }
 
   &:hover {
-    &::before {
-      display: block;
-    }
-
-    & .thumbnail__headline {
-      display: block; // maybe needs to use opacity?
+    & .thumbnail__hover-content {
+      opacity: 1;
     }
   }
+}
+
+.thumbnail__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .thumbnail__headline {
   position: relative;
   z-index: 2;
   color: #fff;
-//  display: none; // maybe needs to use opacity?
+  text-shadow: 0 0 5px $brand-color,
+               0 0 3px $brand-color,
+               0 0 1px $brand-color;
 }
 
 .thumbnail__background {
