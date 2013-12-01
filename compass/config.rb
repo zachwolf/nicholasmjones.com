@@ -7,9 +7,9 @@ project_path = File.expand_path("..",File.dirname(__FILE__))
 
 css_dir = "public/styles" # update to the path of your css files.
 
-sass_dir = "public/styles/sass" # update to the path of your sass files.
+sass_dir = "public/styles/inuit" # update to the path of your sass files.
 
-images_dir = "public/images" # update to the path of your image files.
+images_dir = "public/img" # update to the path of your image files.
 
 javascripts_dir = "public/scripts" # update to the path of your script files.
 
