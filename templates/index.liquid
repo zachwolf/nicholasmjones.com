@@ -2,7 +2,7 @@
 
   {% if mixture.debug %}<!-- index.liquid -->{% endif %}
 
-  {% collection "portfolio" %}
+  {% collection "portfolio" order asc %}
     <ul class="grid">
     {% for post in collection.items %}<!--
 	 -->{% include "portfolio/thumbnail" with post %}<!--
