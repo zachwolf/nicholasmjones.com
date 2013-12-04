@@ -2,8 +2,19 @@
 @import "thumbnail";
 @import "middle-maker";
 
+a {
+	color: $brand-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 /* body */.page {
 	background-color: $page-color;
+	padding: $base-spacing-unit;
+	color: #231f20;
 }
 
 /* div */.page__wrap {
@@ -16,12 +27,61 @@
 	background-repeat: no-repeat;
 }
 
+.sprite--dot {
+	height: 5px;
+	width: 5px;
+	background-image: url("../img/sprite.svg");
+}
+
 .s--logo {
-	height: 150px;
-	width: 260px;
+	max-height: 150px;
+	max-width: 260px;
+	width: 100%;
+	height: 100%;
+	background-size: 100% auto;
 	background-image: url("../img/nick-mjones-logo.svg");
 }
 
 .headline {
 	font-family: $brand-face;
+}
+
+.inline-headline {
+	display: inline;
+	padding-right: $base-spacing-unit;
+}
+
+.site-header {
+	text-align: center;
+
+	a {
+		color: $base-font-color;
+	}
+
+	.active a {
+		color: $brand-color;
+	}
+}
+
+.logo-wrap {
+	margin-bottom: $base-spacing-unit;
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	.headline {
+		margin-bottom: 0;
+	}
+}
+
+.quarantine {
+	img {
+		display: block;
+		margin-bottom: $base-spacing-unit;
+	}
+}
+
+.contact-wrap {
+	text-align: center;
 }
