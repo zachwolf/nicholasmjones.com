@@ -3238,83 +3238,143 @@ label,
 /**
  * Thumbnail for projects:
  *
-  <a href="{{ post.slug }}" class="thumbnail">
-    <h3 class="thumbnail__headline">
-      {{ post.title }}
-    </h3>
-    <img src="{{ post.thumbnail | asset_url }}" class="thumbnail__background">
-  </a>
+  <li class="grid__item  one-half  palm-one-whole">
+    <a href="{{ post.slug }}" class="thumbnail">
+      <div class="thumbnail__layer  thumbnail__hover-content">
+        <div class="middle-maker">
+          <h3 class="headline  gamma  thumbnail__headline  middle-maker__content">
+            {{ post.title }}
+          </h3>
+        </div>
+      </div>
+      <img src="{{ post.thumbnail | asset_url }}" class="thumbnail__background">
+    </a>
+  </li>
  *
  */
-/* line 13, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+/* line 19, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
 .thumbnail {
   display: block;
   margin-bottom: 24px;
   position: relative; }
-  /* line 18, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
-  .thumbnail::before {
-    content: "";
-    display: none;
-    position: absolute;
-    background-color: rgba(45, 86, 159, 0.5);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1; }
-  /* line 31, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
-  .thumbnail:hover::before {
-    display: block; }
-  /* line 35, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
-  .thumbnail:hover .thumbnail__headline {
-    display: block; }
+  /* line 24, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+  .thumbnail .thumbnail__hover-content {
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+    background-color: rgba(45, 86, 159, 0.75);
+    opacity: 0; }
+  /* line 34, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+  .thumbnail:hover .thumbnail__hover-content {
+    opacity: 1; }
 
-/* line 41, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
-.thumbnail__headline {
-  position: relative;
-  z-index: 2;
-  color: #fff; }
-
-/* line 48, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
-.thumbnail__background {
-  display: block; }
-
-/* line 4, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_middle-maker.scss */
-.middle-maker {
+/* line 40, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+.thumbnail__layer {
   position: absolute;
-  display: inline-table;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-/* line 13, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_middle-maker.scss */
+/* line 48, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+.thumbnail__headline {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 0 5px #2d569f, 0 0 3px #2d569f, 0 0 1px #2d569f; }
+
+/* line 57, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_thumbnail.scss */
+.thumbnail__background {
+  display: block; }
+
+/* line 4, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_middle-maker.scss */
+.middle-maker {
+  display: table;
+  height: 100%;
+  width: 100%; }
+
+/* line 10, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_middle-maker.scss */
 .middle-maker__content {
   display: table-cell;
+  text-align: center;
   vertical-align: middle; }
 
-/* body */
 /* line 5, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+a {
+  color: #2d569f;
+  text-decoration: none; }
+  /* line 9, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+  a:hover {
+    text-decoration: underline; }
+
+/* body */
+/* line 14, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .page {
-  background-color: #c9c9c9; }
+  background-color: #c9c9c9;
+  padding: 24px;
+  color: #231f20; }
 
 /* div */
-/* line 9, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 20, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .page__wrap {
   max-width: 640px;
   margin: 0 auto; }
 
-/* line 14, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 25, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .s {
   display: inline-block;
   background-repeat: no-repeat; }
 
-/* line 19, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 30, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.sprite--dot {
+  height: 5px;
+  width: 5px;
+  background-image: url("../img/sprite.svg"); }
+
+/* line 36, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .s--logo {
-  height: 150px;
-  width: 260px;
+  max-height: 150px;
+  max-width: 260px;
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
   background-image: url("../img/nick-mjones-logo.svg"); }
 
-/* line 25, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+/* line 45, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
 .headline {
   font-family: "Novecento", sans-serif; }
+
+/* line 49, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.inline-headline {
+  display: inline;
+  padding-right: 24px; }
+
+/* line 54, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.site-header {
+  text-align: center; }
+  /* line 57, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+  .site-header a {
+    color: #231f20; }
+  /* line 61, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+  .site-header .active a {
+    color: #2d569f; }
+
+/* line 66, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.logo-wrap {
+  margin-bottom: 24px; }
+  /* line 69, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+  .logo-wrap a:hover {
+    text-decoration: none; }
+  /* line 73, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+  .logo-wrap .headline {
+    margin-bottom: 0; }
+
+/* line 79, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.quarantine img {
+  display: block;
+  margin-bottom: 24px; }
+
+/* line 85, /Users/zachwolf/Sites/nicholasmjones.com/public/styles/inuit/mjones/_app.scss */
+.contact-wrap {
+  text-align: center; }
