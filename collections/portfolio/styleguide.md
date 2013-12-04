@@ -1,7 +1,8 @@
 ---
 title: Photography
 thumbnail: 600x400.png
-published: true
+date: 2013-12-01 12:05
+published: false
 ---
 
 <span class="headline giga">
@@ -41,7 +42,9 @@ published: true
 	Zeta headline
 </h5>
 
-__Lorem ipsum dolor sit amet__, consectetur adipiscing elit. Nam consequat vestibulum ligula, ut interdum ligula cursus sit amet. Mauris nec vestibulum odio. Praesent lacus nisi, gravida eu tempus id, viverra eget est. Proin sollicitudin libero in urna elementum, eu porttitor velit laoreet. Nullam tristique ornare lacus at ultrices. Sed lacus est, fringilla vitae nunc vel, lobortis vestibulum orci. Nunc vitae venenatis quam, non tempor orci. Suspendisse sed pellentesque lectus. Proin porta, lectus id iaculis pharetra, turpis magna dapibus mi, sit amet aliquet turpis mauris sit amet risus. Maecenas ac auctor lorem, ac tempus orci. Cras bibendum quis tortor eu aliquam. Duis vitae molestie mauris, sit amet semper orci. Sed at sagittis eros. Fusce interdum gravida ligula, id tincidunt quam porttitor ac. Suspendisse vel tellus et est cursus aliquam eget sed tortor. Curabitur quis suscipit nisl.
+__Lorem ipsum dolor sit amet__, consectetur adipiscing elit. Nam consequat vestibulum ligula, ut interdum ligula cursus sit amet. Mauris nec vestibulum odio.
+
+Praesent lacus nisi, gravida eu tempus id, viverra eget est. Proin sollicitudin libero in urna elementum, eu porttitor velit laoreet. Nullam tristique ornare lacus at ultrices. Sed lacus est, fringilla vitae nunc vel, lobortis vestibulum orci. Nunc vitae venenatis quam, non tempor orci. Suspendisse sed pellentesque lectus. Proin porta, lectus id iaculis pharetra, turpis magna dapibus mi, sit amet aliquet turpis mauris sit amet risus. Maecenas ac auctor lorem, ac tempus orci. Cras bibendum quis tortor eu aliquam. Duis vitae molestie mauris, sit amet semper orci. Sed at sagittis eros. Fusce interdum gravida ligula, id tincidunt quam porttitor ac. Suspendisse vel tellus et est cursus aliquam eget sed tortor. Curabitur quis suscipit nisl.
 
 *Sed ut est euismod*, hendrerit tortor in, tristique quam. Praesent at euismod orci. Nulla consectetur ligula rutrum, ultricies nibh ac, porttitor mi. Duis diam libero, tincidunt non quam sit amet, commodo molestie ante. Proin adipiscing sapien in euismod adipiscing. Vivamus rutrum auctor commodo. Nulla facilisi. Praesent faucibus rhoncus faucibus.
 
